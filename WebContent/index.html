@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Página inicial - Barber Shop </title>
+
+    <link rel="icon" type="image/jpg" href="./imagens/icone-barbearia.png"/>
+    <link rel="stylesheet" href="./css/estilo.css"/>
+    <link rel="stylesheet" href="./css/form-login.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    
+</head>
+<body>
+    
+<div id="interface">
+    <header id="cabecalho">
+    	<a href="index.html">
+        	<img src="./imagens/logo-barbearia.png" id="imagem-logo" alt="Logo da barbearia" height="130" width="180"/>
+        </a>
+        <nav id="menu">
+            <ul type="disc">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="fazer-cadastro.html">Fazer Cadastro</a></li>
+                <li><a href="fale-conosco.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo-principal">
+
+        <h1> A Barbearia </h1> 
+        
+        <fieldset id="caixa-login">
+
+            <form id="form-login" action="Login" method="post" >
+
+                <label for="email"> E-mail </label>
+                <input type="text" id="email" name="email"/>  <br>
+
+                <label for="senha"> Senha </label>
+                <input type="password" id="senha" name="senha" maxlength="15"/> <br>
+
+                <select name="opcao-selecionada">
+                    <option selected> Cliente </option>
+                    <option> Profissional </option>
+                    <option> Administrador </option>
+                </select>  <br>
+
+                <label id="link-cadastro">
+                Não tem cadastro?<a href="fazer-cadastro.html">Faça agora e agende seu horário!</a> 
+                </label> <br> 
+                
+                <div id="oculto"></div> <br>
+
+                <input type="submit" value="Entrar"/>
+
+            </form>
+        </fieldset>
+
+        <p> Após 10 anos de experiência, dedicação, amor e entrega à profissão, João da Silva observou um significativo crescimento de barbearias no Brasil. Foi quando percebeu que era necessário diferenciar-se e decidiu, então, criar uma leitura nova em sua barbearia.
+        Com técnicas variadas, tendências e conceitos exclusivos, João conseguiu levar ao cliente o que há de mais clássico e moderno no cenário da barbearia mundial, dentro de um só lugar!
+        Foi então que, em agosto de 2016, nasceu a nova Barber Shop, onde o cliente pudesse ter uma nova experiência diferenciada e tratamento exclusivo e personalizado. </p>
+
+        <figure id="barbearia" class="index-imagens">
+            <img src="./imagens/a-barbearia.jpeg" alt="A barbearia" height="300" width="500"/>
+            <figcaption> Nossa barbearia </figcaption>
+        </figure>
+
+        <h2> A Estrutura </h2>
+
+        <figure id="estrutura" class="index-imagens">
+            <img src="./imagens/a-estrutura.jpg" alt="A Estrutura" height="260" width="400"/>
+            <figcaption> A Estrutura </figcaption>
+        </figure>
+
+        <p> Dispomos de todo o conforto necessário para uma experiência única e singular… Desde a hora em que o cliente sai de casa com a hora agendada, até o momento de sair da nossa Barbearia, fazemos questão que a experiência seja sempre marcante.
+        Amplo e exclusivo estacionamento para nossos clientes, cadeiras de altíssimo padrão de conforto, totalmente ajustáveis ao corpo do cliente com design de última geração, lavatórios com sistema de massagem corporal (enquanto o cliente lava seus cabelos o seu corpo recebe uma relaxante e deliciosa sessão de massagem), Wi-fi, televisão a cabo, água gelada, café sempre fresquinho e o principal: sua beleza realçada por um time de profissionais que estão em constante capacitação para levar o melhor e mais harmonioso resultado ao seu estilo. </p>
+
+        <div id="horario-atendimento">
+            Horário de Atendimento <br/>
+            Segunda à Sábado - 08hrs às 17hrs <br/> 
+            Domingos - 08hrs às 12hrs <br/>
+        </div>
+    
+        <div id="localizacao">
+            Estrada do Bongi, 425 | Afogados, Recife-PE
+        </div>
+
+        <h2> Nossa Missão </h2>
+
+        <ul>
+            <li> Consolidar-se como referência em estética masculina e ampliar a atuação para toda região e público alvo. </li>
+            <li> Notar a expressão de cada cliente pós tratamento estético em nosso salão. </li> 
+            <li> A satisfação do cliente é nossa paixão! </li>
+        </ul>
+        
+        <div id="botao">
+            <a href="fazer-cadastro.html"> <button class="botao"> Agende seu horário </button> </a>
+		</div>
+
+    </main>
+
+    <footer id="rodape">
+        <p>Copyright &copy; 2018, Barber Shop - Desenvolvido por Lucas Ferreira</p>
+
+        <ul class="rede-social">
+            <li> 
+                <a href="http://www.facebook.com" target="_blank"> 
+                    <img src="./imagens/facebook.png" alt="icone-facebook" id="facebook" /> 
+                </a> 
+            </li>
+            <li> 
+                <a href="http://www.youtube.com" target="_blank"> 
+                    <img src="./imagens/youtube.png" alt="icone-youtube" id="youtube"/>
+                </a> 
+            </li>
+            <li> 
+                <a href="http://www.instagram.com" target="_blank"> 
+                    <img src="./imagens/instagram.png" alt="icone-instagram" id="instagram"/>
+                </a> 
+            </li>
+            <li> 
+                <a href="http://www.twitter.com" target="_blank"> 
+                    <img src="./imagens/twitter.png" alt="icone-twitter" id="twitter"/>
+                </a> 
+            </li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>

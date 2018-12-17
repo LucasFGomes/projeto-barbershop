@@ -1,0 +1,152 @@
+/* ESTILO DO CABEÇALHO */
+nav#menu {
+    display: block;
+}
+
+nav#menu ul  {
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 500px;
+}
+
+nav#menu li {
+    display: inline-block;
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 1s;
+    font-weight: bold;
+}
+
+nav#menu li:hover {
+    background-color: #c9ab6c;
+}
+
+/* ESTILO DO CONTEUDO PRINCIPAL */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../imagens/fundo-animado.gif');
+}
+
+div#interface {
+    width: 900px;
+    margin: -20px auto 5px;
+    background-color: #eee;
+    padding: 10px;
+}
+
+h1, h2 {
+    border-bottom: 2px solid #c9ab6c;
+    color: #373738;
+}
+
+main#conteudo-principal p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+figure.index-imagens {
+    background-color: #c9ab6c;
+    text-align: center;
+    border-radius: 5px;
+}
+
+figure#barbearia {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+figure#estrutura {
+    float: right;
+    margin-top: auto;
+}
+
+figcaption {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    color: #373738;
+    padding: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+div#horario-atendimento {
+    padding: 5px;
+    background-color: #373738;
+    color: #c9ab6c;
+    margin-top: 50px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+div#localizacao {
+    background-color: #c9ab6c;
+    color: #373738;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    padding: 5px;
+}
+
+div#botao {
+    text-align: center;
+}
+
+button.botao {
+    width: 350px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #c9ab6c;
+    font-size: 18px;
+}
+
+/* ESTILO DO RODAPE */
+footer ul {
+    padding-left: 0px;
+}
+
+footer#rodape {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+ul.rede-social li {
+    display: inline;
+}
+
+ul.rede-social img {
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+ul.rede-social img#facebook {
+    background-color: #2372a3;
+}
+
+ul.rede-social img#youtube {
+    background-color: #b00;
+}
+
+ul.rede-social img#instagram {
+    background-color: #3f729b;
+}
+
+ul.rede-social img#twitter {
+    background-color: #0084b4;
+}

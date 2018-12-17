@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Fazer Cadastro - Barber Shop </title>
+
+	<link rel="icon" type="image/jpg" href="./imagens/icone-barbearia.png"/>
+	<link rel="stylesheet" href="./css/estilo.css"/>
+	<link rel="stylesheet" href="./css/form.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	
+	<script type="text/javascript" src="./js/validacao.js"></script>
+</head>
+<body>
+
+<div id="interface">
+	<header id="cabecalho">
+		<a href="index.html">
+        	<img src="./imagens/logo-barbearia.png" id="imagem-logo" alt="Logo da barbearia" height="130" width="180"/>
+        </a>
+		<nav id="menu">
+			<ul>
+				<li><a href="index.html"> Home </a></li>
+				<li><a href="servicos.html"> Serviços </a></li>
+				<li><a href="fazer-cadastro.html"> Fazer Cadastro </a></li>
+				<li><a href="fale-conosco.html"> Fale Conosco </a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="conteudo-agendamento">
+		<h1> Faça seu Cadastro </h1>
+			
+		<form id="form-agendamento" action="Cadastro" method="post">
+
+			<fieldset id="dados-pessoais">
+				<legend> Dados pessoais </legend>
+				<label for="idNome"> Nome </label> <br/>
+				<input type="text" id="idNome" name="nome" placeholder="João da Silva" size="30" required> <br/> <br/>
+
+				<label for="idCpf"> CPF </label> <br/>
+				<input type="text" id="idCpf" name="cpf" placeholder="000.000.000-00" maxlength="11"/> <br/> <br/>
+
+				<label for="idEmail"> E-mail </label> <br/>
+				<input type="email" id="idEmail" name="email" placeholder="exemplo@gmail.com" required/> <br/> <br/>
+
+				<label for="idSenha"> Senha </label> <br/>
+				<input type="password" id="idSenha" name="senha" placeholder="**********" maxlength="15" required> <br/> <br/>
+
+				<label for="idCelular"> Celular </label> <br/>
+				<input type="text" id="idCelular" name="celular" placeholder="(00) 00000-0000" required/> <br/> <br/>
+			</fieldset>
+			
+			<input type="reset" id="botao-redefinir"/>
+			<input type="submit" id="botao-enviar" value="Cadastrar"/>
+
+		</form>
+	</main>
+
+	<footer id="rodape">
+		<p>Copyright &copy; 2018, Barber Shop - Desenvolvido por Lucas Ferreira</p>
+
+		<ul class="rede-social">
+			<li> 
+				<a href="http://www.facebook.com" target="_blank"> 
+					<img src="./imagens/facebook.png" alt="icone-facebook" id="facebook" /> 
+				</a> 
+			</li>
+			<li> 
+				<a href="http://www.youtube.com" target="_blank"> 
+					<img src="./imagens/youtube.png" alt="icone-youtube" id="youtube"/>
+				</a> 
+			</li>
+			<li> 
+				<a href="http://www.instagram.com" target="_blank"> 
+					<img src="./imagens/instagram.png" alt="icone-instagram" id="instagram"/>
+				</a> 
+			</li>
+			<li> 
+				<a href="http://www.twitter.com" target="_blank"> 
+					<img src="./imagens/twitter.png" alt="icone-twitter" id="twitter"/>
+				</a> 
+			</li>
+		</ul>
+	</footer>
+</div>
+
+<script type="text/javascript" src="./js/script.js"></script>
+		
+</body>
+</html>

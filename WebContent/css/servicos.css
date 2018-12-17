@@ -1,0 +1,34 @@
+ul li {
+	list-style: none;
+	display: inline-block;
+	padding-bottom: 15px; 
+}
+
+figcaption, p{
+	text-align: center;
+}
+
+ul p {
+	background-color: #c9ab6c;
+	width: 150px;
+	margin-left: 40px;
+	margin-top: -20px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+div#lista-servicos {
+	text-align: center;
+	margin-left: -50px;
+}
+
+main img {
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+}
+
+
+
+
+
+

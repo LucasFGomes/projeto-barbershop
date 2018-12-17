@@ -1,0 +1,45 @@
+form {
+    width: 500px;
+    margin: auto;
+}
+
+fieldset {
+    margin: 20px;
+    padding-top: 15px;
+    border-radius: 5px;
+}
+
+fieldset#dados-agendamento {
+    background-image: url('../imagens/icone-barbearia.png');
+}
+
+legend, label {
+    font-weight: bold;
+    color: #373738;
+}
+
+input, select, textarea {
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+input#botao-redefinir, input#botao-enviar {
+    padding: 10px;
+    font-weight: bold;
+}
+
+input#botao-redefinir {
+    margin-left: 150px;
+    margin-right: 15px;
+}
+
+input:hover, textarea:hover {
+    background-color: #dadada;
+}
+
+textarea {
+    resize: none;
+}
+
