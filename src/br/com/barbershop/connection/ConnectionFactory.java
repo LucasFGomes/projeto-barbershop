@@ -23,45 +23,4 @@ public class ConnectionFactory {
 
 	}
 
-//	public static void closeConnection(Connection con) {
-//
-//		try {
-//			if (con != null) {
-//				System.out.println("Fechando conexão...");
-//				con.close();
-//			}
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//
-//	}
-//
-//	public static void closeConnection(Connection con, PreparedStatement stmt) {
-//
-//		closeConnection(con);
-//
-//		try {
-//			if (stmt != null) {
-//				stmt.close();
-//			}
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//
-//	}
-//
-//	public static void closeConnection(Connection con, PreparedStatement stmt, ResultSet rs) {
-//
-//		closeConnection(con, stmt);
-//
-//		try {
-//			if (rs != null) {
-//				rs.close();
-//			}
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//
-//	}
-
 }
