@@ -28,7 +28,7 @@ public class FuncionarioController {
 		for (Funcionario funcionario : listaFuncionario) {
 			if (funcionario.getEmail().equals(email)) {
 				for (Agendamento a : listaAgendamentos) {
-					if (a.getProfissional().equals(funcionario.getNome())) {
+					if (a.getNomeProfissional().equals(funcionario.getNome())) {
 						listagem.add(a);
 					}
 				}

@@ -61,7 +61,7 @@ public class FuncionarioDAO {
 			
 			while(rs.next()) {
 				
-				int id = rs.getInt("idFuncionario");
+				int id = rs.getInt("id");
 				String nome = rs.getString("nome");
 				String cpf = rs.getString("cpf");
 				String email = rs.getString("email");

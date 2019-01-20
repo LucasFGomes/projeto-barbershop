@@ -31,7 +31,7 @@
 <div id="interface">
 	<jsp:include page="jsp/header.jsp"></jsp:include>
 	
-	<main id=conteudo-principal>
+	<div id=conteudo-principal>
 
 		<h1>Agendar Serviços</h1>
 		
@@ -50,7 +50,7 @@
 			</select> <br> <br>
 
 			<label>Profissional</label> <br>
-			<select name="profissional" id="idProfissional">
+			<select id="idProfissional" name="profissional">
 				<option>Escolha o profissional</option>	
 				
 					<% for(String profissional : listaProfissionais) { %>
@@ -84,7 +84,7 @@
 		</form>
 		</fieldset>
 		
-	</main>
+	</div>
 
 	<jsp:include page="jsp/rodape.jsp"></jsp:include>
 

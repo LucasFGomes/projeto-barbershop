@@ -4,7 +4,6 @@ public class Cliente extends Pessoa {
 	private int idCliente;
 	
 	public Cliente() {
-		
 	}
 	
 	public Cliente(String nome, String cpf, String email, String senha, String celular) {

@@ -82,7 +82,7 @@ public class ServicoDAO {
 			
 			while(rs.next()) {
 				
-				int id = rs.getInt("idServico");
+				int id = rs.getInt("id");
 				String nome = rs.getString("nome");
 				double preco = rs.getDouble("preco");
 				

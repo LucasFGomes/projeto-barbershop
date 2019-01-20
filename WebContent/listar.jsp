@@ -24,7 +24,7 @@
 
 	<jsp:include page="jsp/headerAdm.jsp"></jsp:include>
 
-	<main id=conteudo-principal>
+	<div id=conteudo-principal>
 
 	<h1>Lista de Funcionários</h1>
 	
@@ -79,7 +79,7 @@
 		
 	</table>
 
-	</main>
+	</div>
 	
 	<jsp:include page="jsp/rodape.jsp"></jsp:include>
 </div>

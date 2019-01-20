@@ -24,7 +24,7 @@
 
 	<jsp:include page="jsp/header.jsp"></jsp:include>
     
-    <main id=conteudo-principal>
+    <div id=conteudo-principal>
 
 	<h1>Excluir Cadastro</h1>
 
@@ -43,7 +43,7 @@
 		</form>
 	</fieldset>
 	
-	</main>
+	</div>
 
 	<jsp:include page="jsp/rodape.jsp"></jsp:include>
 	

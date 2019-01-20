@@ -30,7 +30,7 @@
 
 	<jsp:include page="jsp/headerAdm.jsp"></jsp:include>
 
-	<main id=conteudo-principal>
+	<div id=conteudo-principal>
 
 	<h1>Agendamentos da Barbershop</h1>
 	
@@ -67,7 +67,7 @@
 	
 	<a href="deslogar.jsp"><input type="submit" name="sair" value="Sair"/></a>
 	
-	</main>
+	</div>
 	
 	<jsp:include page="jsp/rodape.jsp"></jsp:include>
 </div>

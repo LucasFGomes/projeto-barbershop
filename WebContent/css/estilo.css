@@ -42,7 +42,7 @@ h1, h2 {
     color: #373738;
 }
 
-main#conteudo-principal p {
+div#conteudo-principal p {
     text-align: justify;
     text-indent: 50px;
 }

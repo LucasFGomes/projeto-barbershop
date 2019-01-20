@@ -7,9 +7,11 @@ import java.util.List;
 import br.com.barbershop.model.bean.Agendamento;
 import br.com.barbershop.model.bean.Cliente;
 import br.com.barbershop.model.bean.Funcionario;
+import br.com.barbershop.model.bean.Servico;
 import br.com.barbershop.model.dao.AgendamentoDAO;
 import br.com.barbershop.model.dao.ClienteDAO;
 import br.com.barbershop.model.dao.FuncionarioDAO;
+import br.com.barbershop.model.dao.ServicoDAO;
 import br.com.barbershop.util.Agenda;
 
 public class ClienteController {
@@ -17,11 +19,13 @@ public class ClienteController {
 	private ClienteDAO daoCliente;
 	private AgendamentoDAO daoAgendamento;
 	private FuncionarioDAO daoFuncionario;
+	private static ServicoDAO daoServico;
 
 	public ClienteController() {
 		this.daoCliente = new ClienteDAO();
 		this.daoAgendamento = new AgendamentoDAO();
 		this.daoFuncionario = new FuncionarioDAO();
+		ClienteController.daoServico = new ServicoDAO();
 	}
 
 	public boolean cadastraCliente(Cliente c) {
@@ -43,7 +47,7 @@ public class ClienteController {
 		List<Agendamento> listaAgendamentos = daoAgendamento.listar();
 		
 		for (Agendamento agendamento : listaAgendamentos) {
-			if (agendamento.getEmail().equals(email)) {
+			if (agendamento.getEmailCliente().equals(email)) {
 				daoAgendamento.excluir(agendamento.getId());
 			}
 		}
@@ -54,7 +58,40 @@ public class ClienteController {
 	public boolean cadastraAgendamento(Agendamento agendamento) {
 		return daoAgendamento.cadastrar(agendamento);
 	}
-
+	
+	public int verificaCliente(Agendamento agendamento){
+		List<Cliente> listaClientes = daoCliente.listar();
+		
+		for (Cliente cliente : listaClientes) {
+			if (cliente.getEmail().equals(agendamento.getEmailCliente())) {
+				return cliente.getIdCliente();
+			}
+		}
+		return 0;
+	}
+	
+	public static int verificaServico(Agendamento agendamento) {
+		List<Servico> listaServicos = daoServico.listar();
+		
+		for (Servico servico : listaServicos) {
+			if (servico.getNome().equals(agendamento.getServico().getNome())) {
+				return servico.getIdServico();
+			}
+		}
+		return 0;
+	}
+	
+	public int verificaFuncionario(Agendamento agendamento) {
+		List<Funcionario> listaFuncionarios = daoFuncionario.listar();
+		
+		for (Funcionario funcionario : listaFuncionarios) {
+			if (funcionario.getNome().equals(agendamento.getNomeProfissional())) {
+				return funcionario.getIdFuncionario();
+			}
+		}
+		return 0;
+	}
+	
 	public List<String> getProfissionais() {
 
 		List<Funcionario> funcionarios;
@@ -90,35 +127,30 @@ public class ClienteController {
 		List<Agendamento> listagem = new ArrayList<>();
 
 		for (Agendamento a : daoAgendamento.listar()) {
-			if (a.getEmail().equals(email)) {
+			if (a.getEmailCliente().equals(email)) {
 				listagem.add(a);
 			}
 		}
 
 		return listagem;
 	}
-	
-	
-	
-	
 
-	// public List<String> verificaProfissionaisDisponiveis(String servicoEscolhido)
-	// {
-	//
-	// List<Servico> servicos = daoServico.listar();
-	// List<Funcionario> funcionarios;
-	// List<String> nomeFuncionarios = new ArrayList<>();
-	//
-	// for (Servico servico : servicos) {
-	// if (servico.getNome().equals(servicoEscolhido)) {
-	// funcionarios = daoFuncionario.listar();
-	// for (Funcionario funcionario : funcionarios) {
-	// nomeFuncionarios.add(funcionario.getNome());
-	// }
-	// }
-	// }
-	// return nomeFuncionarios;
-	// }
+//	public List<String> verificaProfissionaisDisponiveis(String servicoEscolhido) {
+//
+//		List<Servico> servicos = daoServico.listar();
+//		List<Funcionario> funcionarios;
+//		List<String> nomeFuncionarios = new ArrayList<>();
+//
+//		for (Servico servico : servicos) {
+//			if (servico.getNome().equals(servicoEscolhido)) {
+//				funcionarios = daoFuncionario.listar();
+//				for (Funcionario funcionario : funcionarios) {
+//					nomeFuncionarios.add(funcionario.getNome());
+//				}
+//			}
+//		}
+//		return nomeFuncionarios;
+//	}
 
 	// public List<String> verificaDatasDisponiveis(String profissionalEscolhido) {
 	//
@@ -138,45 +170,62 @@ public class ClienteController {
 	// }
 	//
 	// return verificaDataLotada(listaDatas, agendamentos, profissionalEscolhido);
-	// // Verifica se a data está
+	// // Verifica se a data estï¿½
 	// // lotada
 	// }
 	// }
 	// return null;
 	// }
 
-	// private List<String> verificaDataLotada(List<String> listaDatas,
-	// List<Agendamento> agendamentos,
-	// String profissionalEscolhido) {
-	// int contador = 0;
-	// int diaSemana = 0;
-	// try {
-	// for (String data : listaDatas) {
-	// for (Agendamento agendamento : agendamentos) {
-	// String dataAgendada = Util.formatarData(agendamento);
-	// if (data.equals(dataAgendada) &&
-	// agendamento.getProfissional().equals(profissionalEscolhido)) {
-	// contador++;
-	// }
-	// }
-	//
-	// java.util.Date dataAtual = new SimpleDateFormat("dd-MM-yyyy").parse(data);
-	// Calendar c = Calendar.getInstance();
-	// c.setTime(dataAtual);
-	// diaSemana = c.get(Calendar.DAY_OF_WEEK);
-	//
-	// if (contador == (Agenda.getHorarios().size() / 2) && diaSemana == 1) {
-	// listaDatas.remove(data);
-	// } else if (contador == Agenda.getHorarios().size()) {
-	// listaDatas.remove(data);
-	// }
-	// }
-	// } catch (ParseException e) {
-	// e.printStackTrace();
-	// }
-	//
-	// return listaDatas;
-	// }
+//	private List<String> verificaDataLotada(List<String> listaDatas, List<Agendamento> agendamentos,
+//			String profissionalEscolhido) {
+//		int contador = 0;
+//		int diaSemana = 0;
+//		try {
+//			for (String data : listaDatas) {
+//				for (Agendamento agendamento : agendamentos) {
+//					String dataAgendada = Util.formatarData(agendamento);
+//					if (data.equals(dataAgendada)) {
+//						contador++;
+//					}
+//				}
+//
+//				java.util.Date dataAtual = new SimpleDateFormat("dd-MM-yyyy").parse(data);
+//				Calendar c = Calendar.getInstance();
+//				c.setTime(dataAtual);
+//				diaSemana = c.get(Calendar.DAY_OF_WEEK);
+//
+//				if (contador == (Agenda.getHorarios().size() / 2) && diaSemana == 1) {
+//					listaDatas.remove(data);
+//				} else if (contador == Agenda.getHorarios().size()) {
+//					listaDatas.remove(data);
+//				}
+//			}
+//		} catch (ParseException e) {
+//			e.printStackTrace();
+//		}
+//
+//		return listaDatas;
+//	}
+	
+//	public List<String> verificaData(List<String> listaDatas, List<Agendamento> agendamentos) {
+//		
+//		List<String> listaAtual = new ArrayList<String>();
+//		
+//		
+//		for (int i = 0; i < listaDatas.size(); i++) {
+//			
+//			int quant = daoAgendamento.quantData(listaDatas.get(i));
+//			
+//			if (quant < (Agenda.getHorarios().size() * 5)) {
+//				listaAtual.add(listaDatas.get(i));
+//			}
+//			
+//		}
+//		
+//		return listaAtual;
+//		
+//	}
 
 	// public List<String> verificaHorasDisponiveis(String dataEscolhida, String
 	// profissionalEscolhido) {

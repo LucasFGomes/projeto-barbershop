@@ -45,7 +45,6 @@ public class Controller {
 						return true;
 					}
 				}
-
 			}
 
 			return false;
@@ -61,7 +60,6 @@ public class Controller {
 						return true;
 					}
 				}
-				
 			}
 		
 			return false;

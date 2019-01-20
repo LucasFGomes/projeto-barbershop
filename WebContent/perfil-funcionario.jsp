@@ -32,7 +32,7 @@
 		</a> 
 	</header>
 
-	<main id=conteudo-principal>
+	<div id=conteudo-principal>
 
 	<h1>Serviços agendados</h1>
 	
@@ -51,11 +51,11 @@
 		<% for(Agendamento agen : listagem) { %>
 			<tr>
 				<td><%= agen.getId() %></td>
-				<td><%= agen.getServico() %></td>
-				<td><%= agen.getProfissional() %></td>
+				<td><%= agen.getServico().getNome() %></td>
+				<td><%= agen.getNomeProfissional() %></td>
 				<td><%= agen.getData() %></td>	
 				<td><%= agen.getHorario() %></td>
-				<td><%= agen.getPreco() %></td>
+				<td><%= agen.getServico().getPreco() %></td>
 				<td>
 					<form action="ExcluirAgendamento" method="post">
 						<button type="submit" name="conclui" value="<%= agen.getId() %>">Concluir</button>
@@ -70,7 +70,7 @@
 	
 	<a href="deslogar.jsp"><input type="submit" name="sair" value="Sair"/></a>
 	
-	</main>
+	</div>
 	
 	<jsp:include page="jsp/rodape.jsp"></jsp:include>
 </div>

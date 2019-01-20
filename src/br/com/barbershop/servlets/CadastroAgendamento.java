@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import br.com.barbershop.controller.ClienteController;
 import br.com.barbershop.model.bean.Agendamento;
+import br.com.barbershop.model.bean.Servico;
 
 @WebServlet("/CadastroAgendamento")
 public class CadastroAgendamento extends HttpServlet {
@@ -26,15 +27,16 @@ public class CadastroAgendamento extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession session = request.getSession();
+		Servico servico = new Servico();
 		
 		String email = (String) session.getAttribute("email");
-		String servico = request.getParameter("servico");
+		servico.setNome(request.getParameter("servico"));
 		String profissional = request.getParameter("profissional");
 		String data = request.getParameter("data");
 		String horario = request.getParameter("horario");
-		double preco =  Double.parseDouble(request.getParameter("preco"));
+		servico.setPreco(Double.parseDouble(request.getParameter("preco")));
 		
-		Agendamento agendamento = new Agendamento(email, servico, profissional, data, horario, preco);
+		Agendamento agendamento = new Agendamento(email, servico, profissional, data, horario);
 		
 		boolean resposta = cc.cadastraAgendamento(agendamento);
 

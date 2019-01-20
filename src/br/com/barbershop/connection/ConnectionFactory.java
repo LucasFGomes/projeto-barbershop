@@ -18,7 +18,7 @@ public class ConnectionFactory {
 			return DriverManager.getConnection(URL, USUARIO, SENHA);
 
 		} catch (ClassNotFoundException | SQLException e) {
-			throw new RuntimeException("Erro na conex„o: " + e);
+			throw new RuntimeException("Erro na conex√£o: " + e);
 		}
 
 	}

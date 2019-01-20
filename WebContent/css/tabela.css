@@ -6,20 +6,25 @@ table.agendamento {
   text-align: center;
   border-collapse: collapse;
 }
+
 table.agendamento td, table.agendamento th {
   border: 1px solid #FFFFFF;
   padding: 3px 4px;
 }
+
 table.agendamento tbody td {
   font-size: 13px;
 }
+
 table.agendamento td:nth-child(even) {
   background: #EBEBEB;
 }
+
 table.agendamento thead {
   background: #FFFFFF;
   border-bottom: 4px solid #333333;
 }
+
 table.agendamento thead th {
   font-size: 15px;
   font-weight: bold;
@@ -27,6 +32,7 @@ table.agendamento thead th {
   text-align: center;
   border-left: 2px solid #333333;
 }
+
 table.agendamento thead th:first-child {
   border-left: none;
 }

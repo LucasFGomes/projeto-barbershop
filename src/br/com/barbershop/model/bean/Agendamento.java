@@ -2,43 +2,39 @@ package br.com.barbershop.model.bean;
 
 public class Agendamento {
 	private int id;
-	private String email;
-	private String servico;
-	private String profissional;
+	private String emailCliente;
+	private Servico servico;
+	private String nomeProfissional;
 	private String data;
 	private String horario;
-	private double preco;
 	
 	public Agendamento() {
 		
 	}
 
-	public Agendamento(String email, String servico, String profissional, String data, String horario, double preco) {
-		this.email = email;
+	public Agendamento(String emailCliente, Servico servico, String nomeProfissional, String data, String horario) {
+		this.emailCliente = emailCliente;
 		this.servico = servico;
-		this.profissional = profissional;
+		this.nomeProfissional = nomeProfissional;
 		this.data = data;
 		this.horario = horario;
-		this.preco = preco;
 	}
 	
-	public Agendamento(int id, String email, String servico, String profissional, String data, String horario, double preco) {
+	public Agendamento(int id, String emailCliente, Servico servico, String nomeProfissional, String data, String horario) {
 		this.id = id;
-		this.email = email;
+		this.emailCliente = emailCliente;
 		this.servico = servico;
-		this.profissional = profissional;
+		this.nomeProfissional = nomeProfissional;
 		this.data = data;
 		this.horario = horario;
-		this.preco = preco;
 	}
 	
-	public Agendamento(int id, String servico, String profissional, String data, String horario, double preco) {
+	public Agendamento(int id, Servico servico, String nomeProfissional, String data, String horario) {
 		this.id = id;
 		this.servico = servico;
-		this.profissional = profissional;
+		this.nomeProfissional = nomeProfissional;
 		this.data = data;
 		this.horario = horario;
-		this.preco = preco;
 	}
 
 	public int getId() {
@@ -49,28 +45,28 @@ public class Agendamento {
 		this.id = id;
 	}
 	
-	public String getEmail() {
-		return email;
+	public String getEmailCliente() {
+		return emailCliente;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmailCliente(String emailCliente) {
+		this.emailCliente = emailCliente;
 	}
 
-	public String getServico() {
+	public Servico getServico() {
 		return servico;
 	}
 
-	public void setServico(String servico) {
+	public void setServico(Servico servico) {
 		this.servico = servico;
 	}
 	
-	public String getProfissional() {
-		return profissional;
+	public String getNomeProfissional() {
+		return nomeProfissional;
 	}
 
-	public void setProfissional(String profissional) {
-		this.profissional = profissional;
+	public void setNomeProfissional(String nomeProfissional) {
+		this.nomeProfissional = nomeProfissional;
 	}
 
 	public String getData() {
@@ -88,12 +84,4 @@ public class Agendamento {
 	public void setHorario(String horario) {
 		this.horario = horario;
 	}	
-	
-	public double getPreco() {
-		return preco;
-	}
-
-	public void setPreco(double preco) {
-		this.preco = preco;
-	}
 }
